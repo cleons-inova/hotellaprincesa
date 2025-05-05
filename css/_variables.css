@@ -1,0 +1,17 @@
+/*font Variables*/
+/*Color Variables*/
+:root {
+  --hlp-red:    #bc1d22;
+  --hlp-gold:   #e5b10e;
+  --hlp-blue:   #1e293b;
+  --hlp-blue2:  #334155;
+  --hlp-gray:   #f9fafb;
+  --hlp-white:  #FFFFFF;
+  --hlp-gray2:  #e2e8f0;
+  --hlp-gray3:  #cbd5e1;
+  --hlp-gray4:  #94a3b8;
+}
+/*=================== fonts ====================*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Playfair+Display:400,700|Poppins:300,400,500,600,700|Lora:400,400i");
+.col-md-offset-right-1, .col-lg-offset-right-1 {
+  margin-right: 8.33333333%; }

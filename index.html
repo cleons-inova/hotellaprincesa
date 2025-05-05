@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="image/favicon.png" type="image/png">
+        <title>Hotel La Princesa</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <!--================Header Area =================-->
+        <header class="header_area">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="accomodation.html">Habitaciones</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Idioma</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="blog-single.html">Español</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">English</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blog-single.html">中文</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--================Header Area =================-->
+        
+        <!--================Banner Area =================-->
+
+<!-- Banner con animaciones AOS y formulario funcional -->
+<section class="banner_area">
+  <div class="booking_table d_flex align-items-center position-relative">
+    <div class="overlay bg-parallax"
+         data-stellar-ratio="0.9"
+         data-stellar-vertical-offset="0"
+         data-background="">
+    </div>
+
+    <div class="container">
+      <div class="banner_content text-center" data-aos="fade-up">
+        <h6>HOTEL LA PRINCESA</h6>
+        <h2>Vive la mezcla perfecta de comodidad y elegancia</h2>
+        <p>Disfruta de un servicio cálido, detalles cuidados y la tranquilidad de saber que todo lo que necesitas está al alcance de tu mano.</p>
+        <a href="#paquetes" class="btn theme_btn button_hover">Conoce nuestros paquetes</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hotel_booking_area position">
+    <div class="container">
+      <!-- Formulario de reserva -->
+      <form id="bookingForm" action="/reservar" method="GET" class="hotel_booking_table d_flex">
+        <div class="col-md-3">
+          <h2 data-aos="fade-right">Reserva<br>tu habitación</h2>
+        </div>
+        <div class="col-md-9">
+          <div class="boking_table" data-aos="fade-left" data-aos-delay="200">
+            <div class="row">
+              <!-- Fecha de llegada -->
+              <div class="col-md-4">
+                <div class="book_tabel_item">
+                  <div class="form-group">
+                    <div class="input-group date" id="datetimepicker11">
+                      <input name="arrival_date" type="text" class="form-control" placeholder="Fecha de llegada" required/>
+                      <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Fecha de salida -->
+                  <div class="form-group">
+                    <div class="input-group date" id="datetimepicker1">
+                      <input name="departure_date" type="text" class="form-control" placeholder="Fecha de salida" required/>
+                      <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Adultos y Niños -->
+              <div class="col-md-4">
+                <div class="book_tabel_item">
+                  <div class="input-group">
+                    <select name="adults" class="wide" required>
+                      <option value="" disabled selected>Adultos</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3+</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <select name="children" class="wide" required>
+                      <option value="" disabled selected>Niños</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2+</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Habitaciones y botón de envío -->
+              <div class="col-md-4">
+                <div class="book_tabel_item">
+                  <div class="input-group">
+                    <select name="rooms" class="wide" required>
+                      <option value="" disabled selected>Habitaciones</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3+</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="book_now_btn button_hover">Reservar ahora</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+        <!--================Banner Area =================-->
+
+
+        <!--================ Accomodation Area  =================-->
+        <section class="accomodation_area section_gap">
+            <div class="container">
+                <div class="section_title text-center">
+                    <h2 class="title_color">Hotel Accomodation</h2>
+                    <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, </p>
+                </div>
+                <div class="row mb_30">
+
+                  <!-- Habitación Matrimonial -->
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="accomodation_item text-center">
+                      <div class="hotel_img">
+                        <img src="image/room2.jpg" alt="Habitación Matrimonial">
+                        <a href="#" class="btn theme_btn button_hover">Reservar</a>
+                      </div>
+                      <a href="#"><h4 class="sec_h4">Habitación Matrimonial</h4></a>
+                      <p>
+                        • Cama queen<br>
+                        • Televisor LCD de 32’’<br>
+                        • Aire acondicionado<br>
+                        • Baño privado con ducha y tina
+                      </p>
+                      <h5>USD 63.00 <small>/noche</small></h5>
+                    </div>
+                  </div>
+
+                  <!-- Habitación Doble -->
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="accomodation_item text-center">
+                      <div class="hotel_img">
+                        <img src="image/room3.jpg" alt="Habitación Doble">
+                        <a href="#" class="btn theme_btn button_hover">Reservar</a>
+                      </div>
+                      <a href="#"><h4 class="sec_h4">Habitación Doble</h4></a>
+                      <p>
+                        • Dos camas de plaza y media<br>
+                        • Televisor LCD de 32’’<br>
+                        • Aire acondicionado<br>
+                        • Baño privado con ducha y tina
+                      </p>
+                      <h5>USD 82.00 <small>/noche</small></h5>
+                    </div>
+                  </div>
+
+                  <!-- Habitación Ejecutiva -->
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="accomodation_item text-center">
+                      <div class="hotel_img">
+                        <img src="image/room4.jpg" alt="Habitación Ejecutiva">
+                        <a href="#" class="btn theme_btn button_hover">Reservar</a>
+                      </div>
+                      <a href="#"><h4 class="sec_h4">Habitación Ejecutiva</h4></a>
+                      <p>
+                        • Cama king<br>
+                        • Televisor plasma de 40’’<br>
+                        • Aire acondicionado<br>
+                        • Baño privado con ducha y tina
+                      </p>
+                      <h5>USD 82.00 <small>/noche</small></h5>
+                    </div>
+                  </div>
+
+                  <!-- Habitación Suite -->
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="accomodation_item text-center">
+                      <div class="hotel_img">
+                        <img src="image/room1.jpg" alt="Habitación Suite">
+                        <a href="#" class="btn theme_btn button_hover">Reservar</a>
+                      </div>
+                      <a href="#"><h4 class="sec_h4">Habitación Suite</h4></a>
+                      <p>
+                        • Cama king<br>
+                        • Televisor plasma de 40’’<br>
+                        • Aire acondicionado<br>
+                        • Baño privado con jacuzzi y ducha española
+                      </p>
+                      <h5>USD 92.00 <small>/noche</small></h5>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--================ Accomodation Area  =================-->
+
+
+        <style>
+            /* 1. Convertimos la fila en flex para alinear cards */
+                .facilities_area .row.mb_30 {
+                  display: flex;
+                  flex-wrap: wrap;
+                  margin-left: -15px;
+                  margin-right: -15px;
+                }
+
+                /* 2. Cada columna debe ser también un flex-item y estirarse */
+                .facilities_area .row.mb_30 > [class*="col-"] {
+                  display: flex;
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  margin-bottom: 30px;
+                }
+
+                /* 3. El card interno ocupa toda la altura de la columna */
+                .facilities_area .facilities_item {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  width: 100%;
+                  height: 100%;
+                }
+
+                /* 4. Ajustes de icono y título para que no “salten” */
+                .facilities_area .facilities_item .sec_h4 {
+                  margin-bottom: 1rem;
+                }
+        </style>
+        <!--================ Facilities Area  =================-->
+    <section class="facilities_area section_gap">
+  <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
+  </div>
+  <div class="container">
+    <div class="section_title text-center">
+      <h2 class="title_w">Instalaciones & Servicios</h2>
+      <p>Todo lo que <strong>Hotel La Princesa</strong> tiene para hacer tu estancia <em>inolvidable</em>.</p>
+    </div>
+    <div class="row mb_30">
+      <!-- Habitaciones -->
+      <div class="col-lg-6 col-md-6">
+        <div class="facilities_item">
+          <h4 class="sec_h4"><i class="lnr lnr-book"></i> Habitaciones</h4>
+          <p><strong>Nuestro hotel cuenta con <em>84 habitaciones</em> equipadas con:</strong></p>
+          <ul style="margin-left: 1.5rem;">
+            <li><em>Clósets amplios</em></li>
+            <li><em>Caja de seguridad electrónica</em></li>
+            <li><em>Frigobar surtido</em></li>
+            <li><em>TV por cable con canales internacionales</em></li>
+            <li><em>Ropa de cama hipoalergénica</em></li>
+            <li><em>Escritorio ergonómico</em></li>
+            <li><em>Wi-Fi de alta velocidad</em></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Servicios -->
+      <div class="col-lg-6 col-md-6">
+        <div class="facilities_item">
+          <h4 class="sec_h4"><i class="lnr lnr-dinner"></i> Servicios</h4>
+          <p><strong>Disfruta de:</strong></p>
+          <ul style="margin-left: 1.5rem;">
+            <li><em>Restaurant, bar y cafetería</em> (sabores locales e internacionales)</li>
+            <li><em>Gimnasio</em> (equipos modernos y toallas de cortesía)</li>
+            <li><em>Lavandería express</em> (prendas listas el mismo día)</li>
+            <li><em>Estacionamiento privado</em> (acceso directo y vigilancia 24 h)</li>
+            <li><em>Business Centre</em> (estaciones de trabajo, impresiones y salas de reunión bajo reserva)</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Paquetes Especiales -->
+      <div class="col-lg-6 col-md-6">
+        <div class="facilities_item">
+          <h4 class="sec_h4"><i class="lnr lnr-gift"></i> Paquetes Especiales</h4>
+          <p>
+            <strong>Noche Princesa:</strong> <em>decoración romántica, botella de espumante y desayuno gourmet en la habitación.</em><br>
+            <strong>Noche de Bodas:</strong> <em>amenities premium, late-checkout y sesión fotográfica en nuestras áreas más icónicas.</em>
+          </p>
+        </div>
+      </div>
+      <!-- Eventos y Recepciones -->
+      <div class="col-lg-6 col-md-6">
+        <div class="facilities_item">
+          <h4 class="sec_h4"><i class="lnr lnr-apartment"></i> Eventos y Recepciones</h4>
+          <p><strong>Contamos con:</strong></p>
+          <ul style="margin-left: 1.5rem;">
+            <li><em>Dos salones modulares</em> con capacidad flexible</li>
+            <li><em>Sonido profesional y proyectores</em></li>
+            <li><em>Servicio de catering propio</em></li>
+            <li><em>Coordinación integral</em> para que tú disfrutes tu evento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!--================ Facilities Area  =================-->
+        
+        <!--================ About History Area  =================-->
+<section class="about_history_area section_gap">
+  <div class="container">
+    <div class="row">
+      <!-- Texto breve y formateado -->
+      <div class="col-md-6 d_flex align-items-center">
+        <div class="about_content">
+          <h2 class="title title_color">            Hotel La Princesa<br>
+            <strong>Ubicación & Servicios</strong>
+          </h2>
+          <p>Hotel Princesa está muy bien situado en el barrio de Lince, Lima, a 4,5 km de Museo de la Nación, a 5,3 km de Plaza San Martín y a 5,9 km de Museo de la Santa Inquisición. Este hotel de 4 estrellas ofrece servicio de habitaciones, guardaequipaje y wifi gratis. El cafetería es ideal para tomar algo.          </p>
+          <ul style="margin-left:1rem; line-height:1.5;">
+            <li><strong>Wi-Fi gratuito</strong> y <strong>servicio de habitaciones 24 h</strong></li>
+            <li><strong>Parking privado gratis</strong> y centro de negocios</li>
+            <li>Habitaciones con <strong>TV por cable</strong>, <strong>caja fuerte</strong> y <strong>baño privado</strong></li>
+            <li>Traslado al aeropuerto (pago)</li>
+          </ul>
+            <br>
+          <a href="#" class="button_hover theme_btn_two">Conoce más sobre nosotros</a>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="col-md-6">
+        <img class="img-fluid hotel_img" src="image/about_bg.jpg" alt="Hotel La Princesa">
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!--================ About History Area  =================-->
+        
+        <!--================ Testimonial Area  =================-->
+<section class="testimonial_area section_gap">
+  <div class="container">
+    <div class="section_title text-center">
+      <h2 class="title_color">Testimonios de nuestros clientes</h2>
+      <p>Lo que nuestros huéspedes dicen sobre nosotros.</p>
+    </div>
+    <div class="testimonial_slider owl-carousel">
+      <!-- Testimonial 1 -->
+      <div class="media testimonial_item">
+        <img class="rounded-circle" src="image/testimonial-1.jpg" alt="María López">
+        <div class="media-body">
+          <p>“Estuve dos noches en Hotel La Princesa y la atención del personal fue excepcional. La habitación impecable y la vista al centro de Lima, simplemente maravillosa.”</p>
+          <a href="#"><h4 class="sec_h4">María López</h4></a>
+          <div class="star">
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="media testimonial_item">
+        <img class="rounded-circle" src="image/testimonial-1.jpg" alt="Carlos Ruiz">
+        <div class="media-body">
+          <p>“El desayuno buffet superó mis expectativas: gran variedad, productos frescos y un servicio muy amable. Sin duda volveré en mi próxima visita.”</p>
+          <a href="#"><h4 class="sec_h4">Carlos Ruiz</h4></a>
+          <div class="star">
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star-half-o"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="media testimonial_item">
+        <img class="rounded-circle" src="image/testimonial-1.jpg" alt="Ana García">
+        <div class="media-body">
+          <p>“Ubicación perfecta y traslado al aeropuerto puntual. Me encantó la comodidad de la cama y la limpieza diaria.”</p>
+          <a href="#"><h4 class="sec_h4">Ana García</h4></a>
+          <div class="star">
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 4 -->
+      <div class="media testimonial_item">
+        <img class="rounded-circle" src="image/testimonial-1.jpg" alt="Jorge Pérez">
+        <div class="media-body">
+          <p>“Organizamos una reunión en el Business Centre y todo salió perfecto: salas equipadas, conectividad estable y un equipo de apoyo muy profesional.”</p>
+          <a href="#"><h4 class="sec_h4">Jorge Pérez</h4></a>
+          <div class="star">
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star-half-o"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <!--================ Testimonial Area  =================-->
+
+        
+        <!--================ start footer Area  =================-->	
+<footer class="footer-area section_gap">
+  <div class="container">
+    <div class="row">
+      <!-- Dirección -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6 class="footer_title">Dirección</h6>
+          <p>Av. Arenales 2305, Lince, Lima, Perú</p>
+        </div>
+      </div>
+      <!-- Teléfonos -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6 class="footer_title">Teléfonos</h6>
+          <p>4897215 / 989083160 / 989168179</p>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6 class="footer_title">Email</h6>
+          <p>reservas@hotellaprincesa.com</p>
+        </div>
+      </div>
+      <!-- Redes Sociales -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget footer-social">
+          <h6 class="footer_title">Síguenos</h6>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border_line"></div>
+
+    <div class="row footer-bottom d-flex justify-content-center align-items-center">
+      <p class="footer-text m-0">
+        2023 HOTEL LA PRINCESA © Todos los derechos reservados Lima – Perú
+      </p>
+    </div>
+  </div>
+</footer>
+		<!--================ End footer Area  =================-->
+
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/stellar.js"></script>
+        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
